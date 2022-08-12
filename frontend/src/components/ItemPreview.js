@@ -49,7 +49,7 @@ const ItemPreview = (props) => {
           <Link to={`/@${item.seller.username}`} className="flex-grow-1">
             <img
               src={item.seller.image}
-              alt={item.seller.username}
+              alt="/placeholder.png"
               className="user-pic rounded-circle pr-1"
             />
           </Link>
