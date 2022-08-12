@@ -49,10 +49,11 @@ class Editor extends React.Component {
 
     this.submitForm = (ev) => {
       ev.preventDefault();
+
       const item = {
         title: this.props.title,
         description: this.props.description,
-        image: this.props.image,
+        image: this.props.image || "/placeholder.png",
         tagList: this.props.tagList,
       };
 
@@ -93,7 +94,6 @@ class Editor extends React.Component {
           <div className="row">
             <div className="col-md-10 offset-md-1 col-xs-12">
               <ListErrors errors={this.props.errors}></ListErrors>
-
               <form>
                 <fieldset>
                   <fieldset className="form-group">
