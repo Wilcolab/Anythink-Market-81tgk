@@ -75,7 +75,7 @@ router.get("/", auth.optional, function(req, res, next) {
         Item.find(query)
           .limit(Number(limit))
           .skip(Number(offset))
-          .sort({ createdAt: "desc" })
+          .sort({ title: "desc" })
           .exec(),
         Item.count(query).exec(),
         req.payload ? User.findById(req.payload.id) : null
