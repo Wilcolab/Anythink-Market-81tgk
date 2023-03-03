@@ -7,7 +7,7 @@ fi
 
 csv_file="$1"
 
-output_file="output.txt"
+output_file="output_names.txt"
 
 grep -i "@amazon.com" "$csv_file" | while IFS=',' read -r col1 col2 col3 col4
 do
